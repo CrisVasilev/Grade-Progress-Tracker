@@ -1,28 +1,13 @@
 def number_to_words(num):
-    if num == 1:
-        return "first"
-    elif num == 2:
-        return "second"
-    elif num == 3:
-        return "third"
-    elif num == 4:
-        return "fourth"
-    elif num == 5:
-        return "fifth"
-    elif num == 6:
-        return "sixth"
-    elif num == 7:
-        return "seventh"
-    elif num == 8:
-        return "eighth"
-    elif num == 9:
-        return "ninth"
-    elif num == 10:
-        return "tenth"
-    elif num == 11:
-        return "eleventh"
-    elif num == 12:
-        return "twelfth"
+    if 1 <= num <= 12:
+        number_words = [
+            "first", "second", "third", "fourth", "fifth", "sixth",
+            "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
+        ]
+        return number_words[num - 1]
+    else:
+        return str(num) + "th"
+
 average_grade = 0
 student_name = input("Enter the student's name: ")
 years_counter = 1
